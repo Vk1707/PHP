@@ -1,0 +1,135 @@
+Advance PHP
+
+1. OOPS 
+2. Exception Handling
+3. PDO/MySQL
+4. Template Engine
+5. PHP Framework
+
+
+Object Oriented Programming in PHP
+
+1. Encapsulation : Binding Data Members and Member Functions together.
+
+2. Polymorphism : The ability to define a single function more than once.
+
+3. Inheritance : Writing new Types(Classes) on the basis existing ones.
+
+4. Abstraction : Hiding the unneccessary details of the user.
+
+
+
+
+Classes and Objects
+
+Syntax:
+
+class <class-name>
+{
+	<access-specifier> $var-name;
+	<access-specifier> $var-name;
+
+	<access-specifier> function <function-name>()
+	{
+		....
+	}
+}
+
+
+Access Specifiers in PHP
+
+1. private : Members can be accessed within the class only.
+
+2. public : Members can be accessed anywhere in the program. 
+
+3. protected : Members can be accessed in the same class or in any of the derived class(es).
+
+
+
+e.g.
+
+class Student
+{
+	public $id;
+	public $name;
+	public $course;
+	public $fees;
+
+	public function Input($id,$name,$course,$fees)
+	{
+		$this->id=$id;
+		$this->name=$name;
+		$this->course=$course;
+		$this->fees=$fees;
+	}
+
+	public function Output()
+	{
+		echo $this->id . "<br>";
+		echo $this->name;
+		echo $this->course;
+		echo $this->fees;
+	}
+}
+
+
+$obj1=new Student();
+$obj2=new Student();
+
+$obj1->Input(1,"Ankit","Python",16000);
+$obj1->Output();
+
+
+
+
+Define a class student with the following specification
+
+Private members of class student
+
+	- admno                        
+	- sname                       
+	- eng, math, science      
+	- total                          
+	
+	- ctotal() : a function to calculate eng + math + science with float return type.
+
+Public member function of class student
+	- Takedata() : Function to accept values for admno, sname, eng, science and invoke ctotal() to calculate total.
+	- Showdata() : Function to display all the data members on the screen.
+
+
+
+class Student
+{
+	private $admno;
+	private $name;
+	private $eng;
+	private $hindi;
+	private $math;
+	private $total;
+
+	private function CTotal()
+	{
+		return $this->hindi+$this->eng+$this->math;
+	}
+
+	public function TakeData($admno,$name,$eng,$hindi,$math)
+	{
+		$this->admno=$admno;
+		$this->name=$name;
+		$this->eng=$eng;
+		$this->hindi=$hindi;
+		$this->math=$math;
+		$this->total=$this->CTotal();
+	}
+
+	public function ShowData()
+	{
+		echo "Admission No : " . $this->admno . "<br>";
+		echo "Name : " . $this->name . "<br>";
+		echo "English : " . $this->eng . "<br>";
+		echo "Hindi : " . $this->hindi . "<br>";
+		echo "Math : " . $this->math . "<br>";
+		echo "Total : " . $this->total . "<br>";		
+	}
+}

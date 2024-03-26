@@ -1,0 +1,21 @@
+Important Laravel Directories:
+
+
+1. URLs 		
+	\routes\web.php
+
+2. Views 		
+	\resources\views\<file.blade.php>
+
+3. Controllers	
+	\app\Http\Controllers\<file.php>
+
+4. Models 		
+	\app\<file.php>
+
+5. Static (CSS,JS,Images)		
+	\storage\app\public\
+
+6. Migrations
+	\database\migrations\<file.php>
+	

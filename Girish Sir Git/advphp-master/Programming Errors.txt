@@ -1,0 +1,29 @@
+Programming Errors
+
+Syntax Errors
+
+Any violation of rules and poor understanding of the
+programming language results in syntax errors. The compiler can detect such errors. If syntax errors are present in the program then the compilation of the program fails and is terminated after showing the list of errors and the line number where the errors have occurred. In some cases the line number may not exactly indicate the correct place of the error. In some other cases, a single syntax error can result in a long list of errors. Correction of one or two errors in the program may remove the entire list of errors.
+
+Logical Errors
+
+As the name itself implies, these errors are related to the
+logic of the program. Logical errors are also not detected by compiler and cause incorrect results. These errors occur due to incorrect translation of algorithm into the program, poor understanding of the problem and a lack of clarity of hierarchy of operators.
+
+Runtime Errors
+
+Runtime errors are the errors that occur during the execution of the program. Some examples are, dividing by zero error, insufficient memory for dynamic memory allocation, referencing an out-of-range array element. These are not detected by compiler while compilation process. A program with these kinds of errors will run but produce erroneous results or may cause termination of program. Detection and removal of a run-time error is a difficult task.
+
+
+Exception Handling
+------------------
+
+try
+{
+	//Statements in which an exception may occur
+}
+catch
+{
+	//Statements to execute in event an error occurs.
+}
+

@@ -1,0 +1,6 @@
+mysqli
+------
+
+mysqli provider works with the mysql database system. mysqli provides functions as well classes to work with the database management system. 
+
+

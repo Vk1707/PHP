@@ -1,0 +1,17 @@
+A query string is a key value pair data added to a url. A query string can either be added by a browser or manually by the user.
+
+https://mysite.com/?id=6
+
+or
+
+https://mysite.com/?name=vivek&id=4
+
+
+
+Accessing query string in PHP
+
+$_GET['key'];
+
+e.g.
+
+echo $_GET['name'];

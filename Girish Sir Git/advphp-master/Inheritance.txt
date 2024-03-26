@@ -1,0 +1,16 @@
+Inheritance
+
+Inheritance is an object oriented programming concept allows developers to base new data types on existing ones. 
+
+Inheritance allows re-usability of existing classes where you can define new classes in your program without the need of repeating program logic which already been defined in previous classes. It helps programmers in adding new features in their applications without changing the definition of existing classes, this way both new and old classes can be used parallely ensuring backward compatibility.
+
+
+Types of Inheritance
+
+1. Simple Inheritance (A->B)
+2. Multilevel Inheritance (A->B->C)
+3. Hierarchical Inheritance (A->B,C)
+
+(Multiple and Hybrid Inheritances are not supported by PHP)
+
+

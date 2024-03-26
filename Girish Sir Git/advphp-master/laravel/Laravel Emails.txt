@@ -1,0 +1,57 @@
+1. Modify your mail settings in .env file
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=465
+MAIL_USERNAME=niecspi@gmail.com
+MAIL_PASSWORD=*Uncommon##
+MAIL_ENCRYPTION=ssl
+
+
+2. Create a mail class by using following command
+
+php artisan make:mail OrderMail
+
+and add the following content in the build function.
+
+class OrderMail extends Mailable
+{
+    use Queueable, SerializesModels;
+    public function __construct()
+    {
+    }
+    public function build()
+    {
+        return $this->from('niecspi@gmail.com')
+                    ->view('mails/order');
+    }
+}
+
+3. Create a view in resources/views/mails folder.
+
+
+
+4. Create a separete controller to manage email requests. 
+
+php artisan make:controller MailController
+
+
+5. Define a function in MailController to create and send an email.
+
+ 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\OrderMail;
+
+class MailController extends Controller
+{
+    public function Order(Request $request)
+    {
+    	Mail::to('trainer.gkattri@gmail.com')->send(new OrderMail());
+
+    	echo "Mail Sent";
+    }
+}
+
+6. Create a get url for the mail request.
+
+Route::get('order', 'MailController@Order');

@@ -1,0 +1,130 @@
+.bgdark
+{
+	background-color: #212330;
+	box-shadow: 0px 0px 10px #101118;
+}
+.navbar-brand
+{
+	color: #efefef!important;
+    font-size: 14px!important;
+}
+.side-dash
+{
+	background-color: #2a2d3e;
+	position: fixed;
+	width: 200px;
+	height: 100%;
+	padding-top: 40px;
+}
+.main-dash
+{
+	background-color: #212332;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+.dis-card
+{
+	background-color: #2a2d3e;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px #100f0f5e;
+}
+.sidebar-menu .side-list li a
+{
+	background-image: linear-gradient(to bottom,#b6fbff5c 51%, #83a4d430 100%);
+    padding-left: 20px;
+    margin: 1px 0px;
+    width: 100%;
+    display: block;
+    color: #aebcc5;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.sidebar-menu .side-list li a:hover
+{
+	background-image: linear-gradient(to bottom,#7beaf15c 51%, #00ddf330 100%);
+    text-decoration: none;
+    color: #c4c7df;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #71747f!important;
+    text-decoration: none;
+    background-color: #212332!important;
+}
+.dropdown-item
+{
+	color: #9a9da0!important;
+}
+.dis-menu
+{
+	background-color: #2a2d3e;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px #100f0f5e;
+	overflow-y: auto;
+    height: 650px;
+
+}
+.btndanger
+{
+	background-color: #464a6c;
+    color: #a3a4a7;
+    border-radius: 4px;
+    transition: .5s;
+    border: none;
+}
+.dis-file-menu li a
+{
+	padding-left: 5px;
+	background: linear-gradient(90deg, #4a4e72 0%, rgba(0,212,255,0) 70%);
+	border-left: 2px solid #00d4ff;
+	display: block;
+	margin: 4px 0px;
+	border-radius: 3px 0px 0px 3px;
+	font-size: 12px;
+	color: #95969f;
+	padding: 2px 4px;
+	transition: .5s;
+}
+.table td
+{
+	color: #95969f!important;
+	font-size: 12px!important;
+}
+.dropdown-menu
+{
+	background-color: #202c45!important;
+	
+}
+.bgsky, .sticky-top {
+    background-color: #011118;
+}
+.incident-form
+{
+	background-color: #7a7a7e57;
+	padding: 30px;
+	color: #fff;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px black;
+}
+.dis-icon i
+{
+	color: #5c7683;
+    background-color: #5c77845c;
+    padding: 7px 11px;
+    border-radius: 50%;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+
+}
+.dis-body p
+{
+	color: #3197cb;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}

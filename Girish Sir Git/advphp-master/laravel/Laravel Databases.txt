@@ -1,0 +1,48 @@
+#Defining Database Configuration.
+
+#In Laravel Database configuration can be defined in two ways.
+
+1. First, open 'config\database.php' file and make changes in it.
+
+2. Open '.env' file in your project and update database configurations.
+
+
+
+Laravel Migrations
+
+Migrations are like version control for your database, allowing your team to easily modify and share the application's database schema. Migrations are typically paired with Laravel's schema builder to easily build your application's database schema. If you have ever had to tell a teammate to manually add a column to their local database schema, you've faced the problem that database migrations solve.
+
+#Creating Laravel Migrations
+
+php artisan make:migration initialshcema
+
+#Applying Laravel Migrations
+
+php artisan migrate
+
+
+Schema::table('product',function(Blueprint $table){
+	$table->autoIncrement('id');
+	$table->integer('quantity')->after('brand');
+});
+
+
+Schema::table('brand', function(Blueprint $table){
+	$table->string('description',5000)->default('NA');
+});
+
+
+//To Create Table
+Schema::create('table', function(Blueprint){});
+
+//To Update Table
+Schema::table('table', function(Blueprint(){});
+
+//To Rename Table
+Schema::rename('old','to');
+
+//To Delete Table
+Schema::drop('table');
+
+
+

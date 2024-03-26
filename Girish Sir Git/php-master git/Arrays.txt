@@ -1,0 +1,148 @@
+Arrays in PHP
+
+Arrays are collection of data elements.
+	- PHP Arrays are heterogeneous data structures.
+	- PHP Arrays are dynamic.
+
+Types of Arrays
+1. Indexed Arrays : A numeric identifier called index is used to access an element in the array. All elements in the array are provided with an index which could be used to either change the value of the element or read the value of the element.
+
+Declaration:
+
+array-name = array(value1,value2,value);
+
+e.g.
+
+$arr=array();
+$arr=array(11,22,33,44,55);
+$arr=array(12345,'Ankit','Java',16000);
+
+echo $arr[2];
+
+$arr[2]='Advance Java';
+
+
+
+2. Associative Arrays : An associative array or key-value pair array uses keys (identifiers) to access the elements of the given array. The keys in an associative array could be either of string data type, integer data or boolean data type.
+
+Declaration:
+
+array-name=array(key=>value, key=>value, key=>value);
+
+e.g.
+
+$student=array("id"=>12345,"name"=>"Anil Kumar","course"=>"Java","fees"=>16000);
+
+echo $student['course'];
+
+or
+
+$student['course']='Advance Java';
+
+
+
+
+Array Functions
+---------------
+
+
+1. array_unshift(array,value) : Adds a new value at the beginning of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_unshift($arr,99);			//[99,11,22,33,44,55]
+
+2. array_shift(array) : Removes the first value of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_shift($arr);			//[22,33,44,55]
+
+3. array_push(array,value) : Adds a new value at the end of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_push($arr,99);			//[11,22,33,44,55,99]
+
+4. array_pop(array) : Removes the last value of the array.
+
+e.g.
+
+$arr=array(11,22,33,44,55);
+array_pop($arr);			//[11,22,33,44]
+
+5. sort(array) : Sorts an indexed array.
+
+e.g.
+
+$arr=array(55,22,44,11,33);
+sort($arr);					//[11,22,33,44,55]
+
+6. rsort(array) : Sorts an indexed array in reverse order.
+
+e.g.
+
+$arr=array(55,22,44,11,33);
+sort($arr);					//[55,44,33,22,11]
+
+7. asort(array) : Sorts an associative array in ascending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+asort($cities);		//bhopal->chandigarh->chandigarh->lucknow
+
+8. arsort(array) : Sorts an associative array in descending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+arsort($cities);		
+
+9. ksort(array) : Sorts an associative array in ascending order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+asort($cities);		//Haryana->Punjab->UP->MP
+
+10. krsort(array) : Sorts an associative array in as order.
+
+$cities=array("UP"=>"Lucknow","Punjab"=>"Chandigarh","Haryana"=>"Chandigarh","MP"=>"Bhopal");
+
+krsort($cities);		
+
+
+11. explode(delim, String) : The explode() function splits a string based on a string delimeter. This functions returns an array containing the strings formed by splitting the original string.
+
+$input="girish@mail.com;ravi@mail.com"
+$email_ids=explode(";",$input);
+
+$data="1,2,3,4,5,6,7,8,9,10";
+$splitted_data=explode("," , $data);
+
+12. implode(delim,array) : The implode() is a builtin function in PHP and is used to join the elements of an array. 
+
+$data=array("C","C++","Java","PHP");
+$raw=implode(";", $data);
+
+Output
+"C;C++;Java;PHP"
+
+13. extract(array) : The extract() function does array to variable conversion. That is it converts array keys into variable names and array values into variable value. 
+
+e.g.
+
+$person=array("id"=>1234,"name"=>"Girish Attri","email"=>"girish@mail.com");
+
+
+//echo $person['id'];
+
+extract($person);
+
+echo $id;
+echo $name;
+echo $email;
+
+
+

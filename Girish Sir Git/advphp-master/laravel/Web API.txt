@@ -1,0 +1,36 @@
+API
+
+
+API (Application Programming Interface) in general is a set of reusable resources provided in a contained library. API's can be downloaded and used locally on a computer/ in a application.
+
+
+An API may be for a web-based system, operating system, database system, computer hardware, or software library.
+
+An API specification can take many forms, but often includes specifications for routines, data structures, object classes, variables, or remote calls. POSIX, Windows API and ASPI are examples of different forms of APIs.
+
+
+Web API
+
+A server-side web API is a programmatic interface consisting of one or more publicly exposed endpoints(urls) to a defined request–response message system, typically expressed in JSON or XML, which is exposed via the web—most commonly by means of an HTTP-based web server.
+
+Unlike APIs Web APIs can be used by sending HTTP requests to the Web servers. Any application which want to use a web api in it can create an HTTP request and send the request to the web server.
+
+Types of Web APIs
+
+1. SOAP Based APIs
+
+Simple Object Access Protocol based APIs can be invoked by using either a TCP/IP, remote procedures or HTTP calls. The disadvantage of SOAP based is they always return response in XML format.
+
+
+2. REST Based APIs
+
+Representational State Transfer APIs are more popular in modern web applications developments. REST apis are based upon the HTTP verbs and provides a simple interface for the developers and users alike to send.
+
+HTTP verbs used in REST APIs
+
+1. get 	
+2. post
+3. delete
+4. put
+
+

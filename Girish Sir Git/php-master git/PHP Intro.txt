@@ -1,0 +1,775 @@
+PHP : Hypertext Preprocessor
+
+PHP is a server side scripting language. PHP is used to make dynamic web applications or web sites.
+
+Setting up PHP Environment
+
+1. PHP
+2. Web Server (Apache, IIS, Weblogic, Tomcat)
+3. Database Managment System (MySQL, Microsoft SQL Server, Oracle)
+
+
+Default PHP Stack : PHP, Apache and MySQL
+
+
+Installing PHP Stack on a Computer
+
+1. Download or install PHP, Apache and MySQL.
+
+or
+
+1. Download and Install PHP Stacks E.g. WAMP or XAMPP or LAMP
+
+
+
+Using XAMPP:
+
+1. Open XAMPP Control Panel
+2. To Start Apache -> Click on the Start button in front of 'Apache' service.
+3. To Start MySQL -> Click on the Start button in front of 'Mysql' service.
+
+
+Accessing Web Application or Web Pages using Apache Server.
+
+localhost/directory/page
+
+
+Server Directory
+
+c:\xampp\htdocs
+
+
+
+PHP
+
+<?php
+	statement(s)
+?>
+
+
+
+PHP Data Types
+---------------
+
+1. int          43,54
+2. double float       54.76,0.43
+3. string       'Anil',"Anil"
+4. boolean      true, false
+5. array        array(43,54,65), array('name'=>'Girish')
+6. objects
+
+
+
+PHP Variable Declaration
+
+PHP is a dynamically typed programming language. In PHP, you do not have to declare variables explicitly. The data type of variables is inferred automatically.
+
+Syntax:
+
+$<var-name>=value;
+
+e.g.
+
+$a=5;					//int
+$a=5.5;					//double
+$a='Anil';				//String
+$a="Anil";				//String
+$a=true;				//boolean
+$a=array(1,2,3);		//array
+
+
+PHP Operators
+
+1. Arithmetic
+
+A.	+
+B.	-
+C.	*
+D.	/           5/2   =>  2.5
+E.	%           5.2%2.5 	=> 0.2
+
+Note: For int operands / operator does not yield an integer value, it will return a float instead. PHP % operator can operate on both int and float types.
+
+
+2. Relational 
+
+A. >			e.g.	5>2				true
+B. <			e.g.	5<2				false
+C. >=			e.g.	5>=5			true
+D. <=			e.g.	5<=4			false
+E. ==			e.g.	5==5			true
+F. !=			e.g.	5!=3			true
+6. ===          
+
+e.g. (Exact Match)
+
+  1=="1" 		#true
+  1==="1"		#false
+
+
+3. Logical 
+
+A. &&   Logical AND 
+		Returns true if all expressions are true else false
+
+card.isvalid==true && pin==1234
+
+
+B. ||	Logical OR
+		Returns true if any expression is true else false
+
+city=='Delhi' || city=='Mumbai' || city=='Chennai' || city=='Kolkata'
+
+
+C. !	Logical NOT
+		Returns the opposite of a boolean value.
+
+!(city=='Delhi' || city=='Mumbai' || city=='Chennai' || city=='Kolkata')
+
+
+
+4. Assignment 
+
+A. 	= 	Assigns a value to a variable
+
+e.g.
+
+$a=5;
+
+Questions: What is the difference between following expressions.
+
+$a==5	 /		$a=5
+
+
+5. Increment and Decrement 
+
+A.	++		Increment
+B.	--		Decrement
+
+e.g.
+
+$a=5;
+$a=$a+1;		$a++;
+
+
+$a=5;
+$a--;
+
+
+6. Text Operators
+
+A. 	.		(Concatenation/Join)
+
+"Hello"."World"			=	HelloWorld
+"H".1 					=   H1
+
+
+
+Key Points
+
+Arithmetic Addition
+
+$a=1;			//int
+$b="2";			//string
+
+$c=$a+$b;			3
+$d="1"+"4";			5
+$d="1"+"Hello";		1
+$d="1"+"5Hello";	6
+
+
+PHP Output Statement(s)
+
+A. print
+B. echo
+
+
+
+
+
+
+Conditional Statements in PHP
+
+1. if else
+2. switch case
+3. ? :
+
+
+Conditional Statements
+
+1. if.else
+2. switch.case
+3. ?.:
+
+
+
+Syntax: if 
+
+if(condition)
+{
+	//statements
+}
+
+
+Syntax: if.else
+
+if(condition)
+{
+	//statements
+}
+else
+{
+	//statements
+}
+
+
+Syntax: if.else ladder
+
+if(condition)
+{
+	statement(s)
+}
+elseif(condition)
+{
+	statement(s)
+}
+elseif(condition)
+{
+	statement(s)
+}
+else
+{
+	statement(s)
+}
+
+
+Syntax: switch.case
+
+switch(value)
+{
+	case <exp-1>:
+		statement(s)
+		break;
+	case <exp-2>:
+		statement(s)
+		break;
+	default:
+		statement(s)
+		break;
+}
+
+
+E.g.
+
+switch(day)
+{
+	case 1:
+		//do-this
+		break;
+	case 2:
+		//do-this
+		break;
+	case 3:
+		//do-this
+		break;
+	case 4:
+		//do-this
+		break;
+	case 5:
+		//do-this
+		break;
+	case 6:
+		//do-this
+		break;
+	case 7:
+		//do-this
+		break;
+	defaut:
+		//do-this
+		break;
+}
+
+
+switch(choice)
+{
+	case "Entertainment":
+		...
+		break;
+	case "Sports":
+		...
+		break;
+	case "Politics":
+		...
+		break;
+	case "News":
+		...
+		break;
+}
+
+
+
+
+Looping Statements in PHP
+
+Looping Statements in PHP
+
+1. for loop  (Counter Controlled Loop) : for loop is used when the no. of iterations are known in advance. A counter/iterator variable is used to control the no. of iterations. 
+
+Syntax:
+
+for(initialization;condition;updation)
+{
+	//Syntax
+}
+
+e.g.
+
+for($i=1;$i<=10;$i++)
+{
+	//statements
+}
+
+
+2. while loop (Sentinel Controlled Loop) 
+
+
+Sometimes, loop control may need to be based on the value of what we are processing. In this case, we would sentinel-controlled repetition. Sentinel-controlled repetition is sometimes called indefinite repetition because it is not known in advance how many times the loop will be executed. It is a repetition procedure for solving a problem by using a sentinel value (also called a signal value, a dummy value or a flag value) to indicate "end of data entry". The sentinel value itself is not a part of the processed data.
+
+
+Syntx:
+
+while(conditon)
+{
+	//statement(s)
+}
+
+
+while($record=mysqli_fetch_assoc($result))
+{
+}
+
+
+3. do.while loop : 
+
+do while loop is used when you have to execute the loop statement(s) atleast once.
+
+
+Syntax:
+
+do
+{
+	
+}while(condition);
+
+
+
+
+Arrays
+
+An array is a collection of elements. PHP arrays are heterogeneous type data structures, i.e. PHP arrays can store values of any data types. PHP arrays are dynamic i.e. elements can be added to or removed from an element.
+
+Types of Arrays
+
+1. Indexed Arrays : In indexed array a numerical identifier called index is used to identify an element within the array. Array indexes always starts from 0.
+
+
+Declaration:
+
+	array(value1,value2,value3,...,valueN);
+	or
+	[value1,value2,value3,...,valueN];
+
+	e.g
+
+	$lst=array('Anil','Sunil','Ravi','Pankaj','Gaurav');
+	or
+	$lst=['Anil','Sunil','Ravi','Pankaj','Gaurav'];
+
+
+	//Accessing Array Elements
+
+	echo $lst[3];			//Pankaj
+
+
+2. Associative Arrays : In associative array a string identifier or key is used to define an element in the array. Keys can be any alphanumeric values. Keys must be unique for all elements.
+
+
+	array(key=>value,key=>value,....,key=>value);
+	or
+	[key=>value,key=>value,key=>value,key=>value];
+
+	e.g.
+
+	$lst=array('jan'=>31,'feb'=>28,'mar'=>31);
+
+	//Accessing Array Elements
+
+	echo $lst['jan'];		//31
+	echo $lst['mar'];		//31
+
+
+
+
+
+
+Array Operations
+
+//Addition of an element
+
+- Indexed Array
+
+$arr=array('Girish Attri','Ravi Kumar','Nikhil Verma')
+
+$arr[]='Ankit';				//Auto Indexing
+$arr[]='Pankaj Kapoor';
+
+
+- Associative Array
+
+$arr=array('UP'=>'Lucknow','Maharashtra'=>'Mumbai','Gujarat'=>'Gandhi Nagar');
+
+$arr['Rajasthan']=>'Jaipur';
+
+
+//Deletion of an Element
+
+- Indexed Array
+
+$arr=array('New Delhi','Chennai','Kolkata','Mumbai');
+
+unset($arr[1]);
+
+
+- Associative Array
+
+unset($arr['UP']);
+
+
+//Updating an Element
+
+- Indexed Array
+
+$arr=array('New Delhi','Chennai','Kolkata','Mumbai');
+$arr[1]='Hyderabad';
+
+- Associative Array
+
+$arr['Gujarat']='Ahmadabad';
+
+
+
+
+
+Array Functions
+
+1. array_unshift($arr,$value) : Inserts a new element in the array at the beginning.
+
+e.g.
+
+$arr=(54,76,45,87);
+
+array_unshift($arr,99);		//(99,54,76,45,87)
+
+2. array_shift($arr) : Deletes an  element from the beginning of an array.
+
+e.g.
+
+
+$arr=(54,76,45,87);
+array_shift($arr); 			//(76,45,87)
+
+
+3. array_push(array,value) : Inserts value at the end of the array
+
+e.g.
+
+$arr=(54,76,45,87);
+array_push($arr,99); 			//(54,76,45,87,99)
+
+
+4. array_pop(array) : Pops(Deletes) an element from the end of an array
+
+e.g.
+
+$arr=(54,76,45,87);
+array_pop($arr); 			//(54,76,45)
+
+
+5. array_sort(array) : Sorts an indexed array in ascending order.
+
+$arr=(54,76,45,87);
+array_sort($arr); 			//(45,54,76,87)
+
+
+5. array_rsort(array) : Sorts an indexed array in descending order.
+
+$arr=(54,76,45,87);
+array_rsort($arr); 			//(87,76,54,45)
+
+
+5. array_asort(array) : Sorts an associative array in ascending order (In the order of values).
+
+6. array_arsort(array) : Sorts an associative array in descending order (In the order of values).
+
+7. array_ksort(array) : Sorts an associative array in ascending order (In the order of keys).
+
+8. array_krsort(array) : Sorts an associative array in descending order (In the order of keys).
+
+9. extract(array) : Extracts each value from an associative array and create local variables with the name of keys.
+
+e.g.
+
+$capitals=array('UP'=>'Lucknow','Maharashtra'=>'Mumbai','Gujarat'=>'Gandhi Nagar');
+
+extract($capitals);
+echo $UP;
+echo $Maharashtra;
+
+10. count(array) : Returns the number of elements of an array.
+
+e.g.
+
+$arr=array(43,65,45,87,56);
+count($arr);					//5
+
+
+
+
+
+
+
+
+String Functions
+
+1. strlen(string) : Returns the length of the string.
+
+e.g.
+
+$name='Girish Attri';
+strlen($name);					//12
+
+
+2. strcmp(string1,string2) : Compares two strings, returns 0 if both strings are equal, a positive number if string1 is greater than string2, a negative number if string2 is greater than string1.
+
+e.g.
+
+$city="New Delhi";
+$userchoice="Delhi";
+
+strcmp($city,$userchoice);		//+
+
+
+3. strcat(string1,string2) : Joins string2 with string1.
+
+e.g.
+
+$firstname='Girish';
+$lastname='Attri';
+
+$name=strcat($firstname,$lastname);			//GirishAttri
+
+
+4. lcfirst(string) : Lower Character First.
+
+$string="Anil";
+lcfirst($string);			//anil
+
+5. ucfirst(string) : Upper Character First
+
+$string="anil";
+ucfirst($string);			//Anil
+
+6. ucwords(string) : Convert first character of every word to capital case.
+
+$string="samsung galaxy s7";
+ucwords($string);			//Samsung Galaxy S7
+
+7. lcwords(string)
+
+8. strtolower(string) : Converts the string into lower case.
+
+9. strtoupper(string) : Converts the string into upper case.
+
+10. substr(string,start,[length]) : Extracts specified no. of characters from start position. If length is not spefied all characters will be extract from the start position till end.
+
+e.g.
+
+$pcode="DEL2342";
+$citycode=substr($pcode,0,3);		//DEL
+
+
+11. substr_replace(string,replacemane,start,length) : Replace text with the given string.
+
+e.g.
+
+$pcode="DEL2342";
+$newcode=substr_replace($pcode,"MUM",0,3);		//MUM2342
+
+
+12. explode(separator,string) : Converts a string into array, separated by a separator.
+
+e.g.
+
+$string="C,C++,Java,Python,PHP";
+$skills=explode(',',$string);		//['C','C++','Java','Python','PHP']
+
+foreach($skills as $skill)
+{
+	echo $skill . "<br>";
+}
+
+
+13. implode(separator,array) : Joins array elements into a string value separated by separator.
+
+e.g.
+
+$skills=['C','C++','Java','PHP'];
+$string=implode(",", $skills);		//C,C++,Java,PHP
+
+
+
+14. preg_match(pattern,string) : Matches for specified pattern in the string.
+
+e.g.
+
+$filetype="image/jpeg";
+preg_match('/image/',$filetype)
+
+e.g.
+
+preg_match('/\d{4}-\d{4}-\d{4}-\d{4}/', $credit_card)
+
+
+15. str_shuffle(string,length) : Return a randomly shuffled string. 
+
+e.g.
+
+$otp=str_shuffle("0123456789ABCDEFGH");
+echo substr($otp,0,6);
+
+
+
+
+Date and Time Functions
+
+Data and Time Formatting Codes:
+
+m : Month 						(01-12)
+d : Day 						(01-31)
+w : Day of the Week				(0-6, 0 for Sunday)
+z : Day of year 				(0-365)
+y : Year 						(2008,2011)
+Y : Year 						(08, 11)
+H : Hour (24 Hrs) 				(00-23)
+h : Hour (12 Hrs) 				(00-11)
+i : Minutes  					(00-59)
+s : Seconds 					(00-59)
+
+
+1. date(format, [timestamp]) :  Return a formatted date based on the 					provided format string. The default is the current
+				UNIX timestamp, if $timestamp is not provided. 
+
+
+e.g.
+
+$date=date('d-m-y');					//03-05-2019
+
+$date=date('d-m-y',4234242423);
+echo $date;
+
+
+2. getdate() : Return an associative array representation of a
+					timestamp (Current Time). 
+
+
+eg.
+
+$cur_date=getdate();
+var_dump($cur_date);
+
+echo $cur_date['day'];
+
+
+3. date_create(string) : Creates a date from specified string.
+
+e.g.
+
+$date=date_create('2019-05-30');
+
+
+3. date_add(date,interval) : Adds days, months, years, hours, minutes, or seconds to specified date
+
+$interval=date_interval_create_from_date_string('1 month');
+$today=date_create(date('y-m-d'));
+$sub_end=date_add($today,$interval);
+
+
+4. date_sub(date,interval) : Subtract days, months, years, hours, minutes, or seconds to specified date
+
+$interval=date_interval_create_from_date_string('1 month 5 days');
+$today=date_create(date('y-m-d'));
+$sub_end=date_sub($today,$interval);
+echo date_format($sub_end,'d-M-y');
+
+github.com/attrigirish/php
+
+
+
+
+User Defined Functions
+----------------------
+
+
+Syntax:
+
+function <function-name>(<parameter(s)>)
+{
+	<function-definition>
+}
+
+
+e.g.
+
+function Sum($a,$b)
+{
+	$c=$a+$b;
+	return $c;
+}
+
+
+e.g.
+
+
+Write a function CalAvg() that will accept an array as a parameter and will return the average of all elements of an array.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

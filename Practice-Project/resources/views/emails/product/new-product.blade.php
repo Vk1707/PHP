@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h1>New Product has added.</h1>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>{{$product->Pname}}</td>
+                <td>{{$product->Pcategory}}</td>
+                <td>{{$product->Pprice}}</td>
+            </tr>
+        </table>
+    </body>
+</html>

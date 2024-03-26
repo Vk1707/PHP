@@ -1,0 +1,51 @@
+Laravel
+
+Laravel is a powerful MVC PHP framework, designed for developers who need a simple and elegant toolkit to create full-featured web applications. 
+
+Laravel is a free, open-source PHP web framework, intended for the development of web applications following the model–view–controller (MVC) architectural pattern. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance.
+
+
+Laravel Features
+
+Some of the best features of Laravel are such as:-
+
+- Simple and Secure:-Laravel always uses hashed passwords it never saves the password as plain text in the database.
+    
+- Object-oriented approach:-The object-oriented libraries are one of the best features of Laravel these libraries are easy to implement & has many features like encryption, password resetting, checking active user, hashing and many more.
+
+- Fast & cost effective:-Laravel has a fast development cycle as compares to others that include little effort and cost.
+    
+- MVC support:-One of the greatest advantage of Laravel is it supports Model View Controller architecture.
+    
+- Artisan: -Laravel developers can extend the functionality & capability of Artisan by implementing new custom commands.
+    
+- Blade Template Engine:- This template engine helps to work with the typical PHP/HTML spaghetti code in an improved manner.
+    
+- Unit Testing: It allows the user to conveniently test the applications, ensure the unexpected breakdowns.
+    
+- Caching:-Laravel supports caching for temporary data storage to store data for a while, which can be retrieved quickly.
+
+
+
+
+Installing Laravel
+
+#Method 1
+
+1. Download the Laravel installer using Composer:
+
+>composer global require laravel/installer
+
+
+2. To create a new project type following command in command prompt:
+
+>laravel new <projectname>
+
+
+
+
+#Method 2 
+
+1. you may also install Laravel by issuing the Composer create-project command in your terminal.
+
+> composer create-project --prefer-dist laravel/laravel <projectname>

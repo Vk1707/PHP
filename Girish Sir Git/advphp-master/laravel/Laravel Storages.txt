@@ -1,0 +1,85 @@
+Laravel Storages
+
+1. Public Storage
+
+storage\app\public
+
+
+The public storage is intended for files that are going to be publicly accessible. By default, the public files are stored storage/app/public. 
+
+To make them accessible from the web, you should create a symbolic link from public/storage to storage/app/public. 
+
+To create symbolic use the following command:
+
+>php artisan storage:link
+
+
+
+
+2. Local Storage
+
+storage\app
+
+When using the local driver, all file operations are relative to the root directory defined in your filesystems configuration file. 
+
+By default, this value is set to the storage/app directory. 
+
+
+3. Cloud Storage
+
+Cloud Storage lets you write files on to the cloud server.
+
+Before using the SFTP, S3, or Rackspace drivers, you will need to install the appropriate package via Composer:
+
+    SFTP: league/flysystem-sftp ~1.0
+    Amazon S3: league/flysystem-aws-s3-v3 ~1.0
+    Rackspace: league/flysystem-rackspace ~1.0
+
+
+
+
+Saving Files in Laravel using Storage Facade
+--------------------------------------------
+
+e.g.
+
+Storage::disk('local')->put('file.txt', 'Contents');
+
+Storage::disk('s3')->put('avatars/1', $fileContents);
+
+
+
+Reading Files from Laravel Storage
+
+e.g.
+
+$contents = Storage::get('file.jpg');
+
+
+Checking if a particula file exists.
+
+e.g.
+
+$exists = Storage::disk('s3')->exists('file.jpg');
+
+
+Downloading Files
+
+return Storage::download('file.jpg');
+
+return Storage::download('file.jpg', $name, $headers);
+
+
+File URLS
+
+$url = Storage::url('file.jpg');
+
+
+Uploading Files
+
+$path = $request->file('photo')->store('uploads','public');
+
+Note: By default 'store' function uploads the file(s) with an arbitrary name. To upload files with specific names use 'storeAs' function.
+
+
+$path = $request->file('photo')->storeAs('uploads','filename.jpg','public');

@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.product{
+    height: 300px;
+    width: 25%;
+    border: 1px solid black;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.price{
+color: red;
+}
+.rating{
+    background-color: green;
+    color: aliceblue;
+}
+
+img{
+    height: 200px;
+    width: 150px;
+    border: 1px solid white;
+    padding: 5px;
+}

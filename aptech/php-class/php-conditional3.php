@@ -1,0 +1,26 @@
+<?php 
+$sp = 2000;
+$cp = 2000;
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Conditional statement</title>
+</head>
+<body>
+    <?php if($sp>$cp){ ?>
+        <span style= "color:green">Profit</span>
+    
+    <?php } else if($sp<$cp) { ?>
+        <span style= "color:Red">Loss</span>
+
+    <?php } else { ?>
+        <span style= "color:black">NO Profit Loss</span>
+    <?php  } ?>
+    
+</body>
+</html>

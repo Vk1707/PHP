@@ -1,0 +1,48 @@
+Controller (Business Logic) 
+----------------------------
+
+- app\http\controllers\<controllerclass.php>
+
+artisan command:
+
+php artisan make:controller <class-name>
+
+
+
+Model (Database Logic)
+----------------------
+
+- app\<modelclass.php>
+
+artisan command:
+
+php artisan make:model <class-name>
+
+
+Views (Presenter Logic)
+-------------------------
+
+- resources\views\<view-name>
+
+
+
+Migrations
+----------
+
+
+- database\migrations\<migration-name>
+
+artisan command:
+
+php artisan make:migration <migration-name>
+
+Note: All migrations must be applied by using following command:
+
+php artisan migrate
+
+
+
+Route
+-----
+
+- routes\web.php

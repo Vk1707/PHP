@@ -1,0 +1,47 @@
+Laravel Tutorial
+
+Step 1 : Create a laravel project by using following command:
+
+>composer create-project --prefer-dist laravel/laravel lshop
+
+
+Step 2 : Create a database 'lshop' in mysql.
+
+
+Step 3 : Create database configuration in <product-dir>/.env file.
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=lshop
+DB_USERNAME=root
+DB_PASSWORD=
+
+Step 4 : Create a migration using following command: 
+
+Note: Command Prompt must be set to <project-dir>
+
+>php artisan make:migration initial_shchema
+
+
+Step 5 : Apply migrations using following command:
+
+>php artisan migrate
+
+
+Step 7 : Create Add, Update and Display templates/views.
+
+
+Step 6 : Create Model by using following command:
+
+>php artisan make:model Product
+
+
+Step 8 : Create Controller by using following command:
+
+>php artisan make:controller ProductController
+
+
+Step 9 : Create controller functions Add, Update, Delete and Display operations
+
+

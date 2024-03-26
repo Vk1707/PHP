@@ -1,0 +1,28 @@
+Interface
+
+An Interface allows the users to create programs, specifying the public methods that a class must implement, without involving the complexities and details of how the particular methods are implemented. It is generally referred to as the next level of abstraction. It resembles the abstract methods, resembling the abstract classes. An Interface is defined just like a class is defined but with the class keyword replaced by the interface keyword and just the function prototypes. The interface contains no data variables. The interface is helpful in a way that it ensures to maintain a sort of metadata for all the methods a programmer wishes to work on.
+
+
+e.g.
+
+interface Shape{
+	public function Draw();
+}
+
+class Rectangle implements Shape{
+	private $length;
+	private $breadth;
+
+	public function Set($length,$breadth){
+		$this->length=$length;
+		$this->breadth=$breadth;
+	}
+
+	public function Draw(){
+
+	}
+}
+
+$obj=new Rectangle();
+$obj->Set(5,10);
+$obj->Draw();

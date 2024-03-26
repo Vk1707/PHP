@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule ^security/(.*)$ /$1 [L,NC,R=302]  
+</IfModule>

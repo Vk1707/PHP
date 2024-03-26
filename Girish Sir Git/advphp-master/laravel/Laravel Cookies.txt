@@ -1,0 +1,36 @@
+Saving Cookies in Laravel
+---------------------------
+
+Method 1:
+
+$response=response('Hello World');
+$response->cookie('name', 'value', $minutes);
+return $response;
+
+Method 2:
+
+$response=view('...');
+$response->cookie('name','value',$minutes);
+return $response;
+
+Method 3:
+
+$response=redirect('...');
+$response->cookie('name','value',$minutes);
+return $response;
+
+
+//Reading Cookies in Laravel
+
+$value = $request->cookie('name');
+
+
+
+
+Saving Cookies using Cookie facade
+-----------------------------------
+
+Cookie::queue('name', 'value', $minutes);
+
+
+Note: While using Cookie facade the queued cookies are automatically added to response object when a response is created.
