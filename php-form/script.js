@@ -1,10 +1,10 @@
 // script.js
 
 function validateForm() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var mobile = document.getElementById('mobile').value;
-    var city = document.getElementById('city').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let mobile = document.getElementById('mobile').value;
+    let city = document.getElementById('city').value;
 
     // Name validation
     if (!name.match(/[A-Za-z ]{1,}/)) {
@@ -34,13 +34,13 @@ function validateForm() {
 }
 
 function addUser() {
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
-    var mobile = document.getElementById('mobile').value;
-    var gender = document.getElementById('gender').value;
-    var city = document.getElementById('city').value;
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let mobile = document.getElementById('mobile').value;
+    let gender = document.getElementById('gender').value;
+    let city = document.getElementById('city').value;
 
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('POST', 'add_user.php', true);
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
@@ -55,7 +55,7 @@ function addUser() {
 
 // Function to load user list
 function loadUserList() {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', 'get_users.php', true);
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
@@ -66,7 +66,7 @@ function loadUserList() {
 }
 // Function to delete user
 function deleteUser(id) {
-    var xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', 'delete_user.php?id=' + id, true);
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {

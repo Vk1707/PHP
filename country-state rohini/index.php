@@ -1,9 +1,9 @@
 <?php
-include_once("../country-state/connec.php");
+include_once("../country-state rohini/connec.php");
 
 $countries = GetCountries();
 
-include_once("../country-state/template/header.php");
+include_once("../country-state rohini/template/header.php");
 
 ?>
 
@@ -28,7 +28,7 @@ include_once("../country-state/template/header.php");
         </select>
     </div>
 </div>
-<?php include_once("../country-state/template/footer.php");
+<?php include_once("../country-state rohini/template/footer.php");
 ?>
 
 <script>

@@ -56,5 +56,5 @@ Route::get('my-image', function(){
     // echo Storage::disk('public')->exists('boatbt1.jpg');
     // echo Storage::disk('public')->get('boatbt.jpg');
     // echo Storage::disk('public')->download('boatbt.jpg');
-    echo Storage::disk('public')->url('boatbt.jpg');
+    // echo Storage::disk('public')->url('boatbt.jpg');
 });
