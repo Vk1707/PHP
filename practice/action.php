@@ -57,4 +57,16 @@ function EditUser($id,$name,$email,$mobile,$state,$gender){
 
 }
 
+function DeleteUser($id){
+    global $db;
+    $query = "delete from userdata where id='$id'";
+    $result = mysqli_query($db,$query);
+    if($result > 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
 ?>

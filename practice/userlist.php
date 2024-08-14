@@ -36,7 +36,7 @@ $users = GetUsers();
         <td><?= $user['state']?></td>
         <td><?= $user['gender']?></td>
         <td><a href="edituser.php?id=<?= $user['id']?>">Edit</a></td>
-        <td><a href="deleteuser.php?id=<?= $user['id']?>">Delete</a></td>
+        <td><a href="deleteuser.php?id=<?= $user['id']?>" onclick='return confirm("Press a button!")'>Delete</a></td>
     </tr>
     <?php } ?>
   </tbody>
@@ -44,5 +44,9 @@ $users = GetUsers();
     
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+    
+</script>
 </body>
 </html>
